@@ -1,0 +1,131 @@
+set fenc=utf-8
+set fencs=utf-8,usc-bom,euc-jp,gb18030,gbk,gb2312,cp936
+
+"Set for taglist
+filetype plugin on
+let Tlist_Use_Right_Window=1
+let Tlist_File_Fold_Auto_Close=1
+let Tlist_Auto_Open=1
+
+"if has("multi_byte")
+"	set encoding=utf-8
+"	set fileencoding=chinese
+"	set fileencodings=ucs-bom,utf-8,chinese
+"endif
+
+if has("win32")
+	set guifont=YaHei\ Consolas\ Hybrid:h12
+	"set guifont=Monaco:h11
+"	set guifont=YaHei\ Consolas\ Hybrid:h11
+"	set guifontset=YaHei\ Consolas\ Hybrid:h11
+endif
+set nocompatible
+source $VIMRUNTIME/vimrc_example.vim
+source $VIMRUNTIME/mswin.vim
+behave mswin
+colo slate
+set nu
+set tabstop=4
+set shiftwidth=4
+set nobackup
+set autoindent
+set cindent
+set ic
+set hlsearch
+set incsearch
+set cursorline
+set wildmenu
+
+set whichwrap+=<,>,h,l
+set autoread
+
+
+"Paste toggle - when pasting something in, don't indent.
+set pastetoggle=<F3>
+
+"Remove indenting on empty lines
+map <F2> :%s/\s*$//g<cr>:noh<cr>''
+
+" C++的编译和运行
+map <F6> :call CompileGpp()<CR>
+func! CompileGpp()
+exec "w"
+exec "!g++ % -o %<"
+endfunc
+
+map <F7> :call RunGpp()<CR>
+func! RunGpp()
+exec "! %<"
+endfunc
+
+set foldenable
+set foldmethod=manual
+
+map <space> /
+
+map <C-j> <C-W>j
+map <C-k> <C-W>k
+map <C-h> <C-W>h
+map <C-l> <C-W>l
+
+map <M-k> :move .-2<CR>
+map <M-j> :move .+1<CR>
+
+map <C-t> <ESC>:tabnew .<CR>
+
+map <M-1> <ESC>1gt
+map <M-2> <ESC>2gt
+map <M-3> <ESC>3gt
+map <M-4> <ESC>4gt
+map <M-5> <ESC>5gt
+map <M-6> <ESC>6gt
+map <M-7> <ESC>7gt
+map <M-8> <ESC>8gt
+map <M-9> <ESC>9gt
+
+func! DeleteTrailingWS()
+  exe "normal mz"
+  %s/\s\+$//ge
+  exe "normal `z"
+endfunc
+autocmd BufWrite *.py :call DeleteTrailingWS()
+
+map <F5> :call Cwd()<CR>
+func! Cwd()
+  let cwd = getcwd()
+  return "e " . cwd 
+endfunc
+
+
+set diffexpr=MyDiff()
+function MyDiff()
+  let opt = '-a --binary '
+  if &diffopt =~ 'icase' | let opt = opt . '-i ' | endif
+  if &diffopt =~ 'iwhite' | let opt = opt . '-b ' | endif
+  let arg1 = v:fname_in
+  if arg1 =~ ' ' | let arg1 = '"' . arg1 . '"' | endif
+  let arg2 = v:fname_new
+  if arg2 =~ ' ' | let arg2 = '"' . arg2 . '"' | endif
+  let arg3 = v:fname_out
+  if arg3 =~ ' ' | let arg3 = '"' . arg3 . '"' | endif
+  let eq = ''
+  if $VIMRUNTIME =~ ' '
+    if &sh =~ '\<cmd'
+      let cmd = '""' . $VIMRUNTIME . '\diff"'
+      let eq = '"'
+    else
+      let cmd = substitute($VIMRUNTIME, ' ', '" ', '') . '\diff"'
+    endif
+  else
+    let cmd = $VIMRUNTIME . '\diff'
+  endif
+  silent execute '!' . cmd . ' ' . opt . arg1 . ' ' . arg2 . ' > ' . arg3 . eq
+endfunction
+
+"folding settings
+set foldmethod=indent   "fold based on indent
+
+:set tabstop=4
+:set shiftwidth=4
+:set expandtab
+

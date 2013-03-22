@@ -1,0 +1,38 @@
+# Java
+*.class
+*.jar
+*.war
+*.tar
+[Bb]in/
+
+# Maven
+target/
+
+# Git
+*.diff
+*.orig
+*.swp
+
+# Eclipse
+.project
+.settings
+.classpath
+.metadata
+
+#Intellij
+.idea
+*.iml
+.checkstyle
+
+# Temp
+tmp/
+temp/
+
+# Compiled source
+*.exe
+
+# Log
+*.log
+
+# Data file
+*.txt
