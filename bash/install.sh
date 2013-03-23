@@ -1,6 +1,7 @@
 #!/bin/bash
 
-dir=$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )
-echo "$dirname $dir"
-echo 'dot_path=' | cat >> ~/.bashrc
+dot_path=$( cd "$( dirname $( dirname "${BASH_SOURCE[0]}" ) )" && pwd )
+
+echo "Append the bash to ~/.bashrc"
+echo 'dot_path='$dotpath | cat >> ~/.bashrc
 cat .bashrc >> ~/.bashrc

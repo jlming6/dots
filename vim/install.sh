@@ -3,6 +3,13 @@ then
     cp ~/.vimrc ~/.vimrc_bak
 fi
 
-cp .vimrc ~/.vimrc
+dot_path=$( cd "$( dirname $( dirname "${BASH_SOURCE[0]}" ) )" && pwd )
 
-git clone http://github.com/gmarik/vundle.git ~/.vim/bundle/vundle
+echo "Copy vimrc file"
+cp $dot_path/vim/.vimrc ~/.vimrc
+
+if [ ! -d ~/.vim/bundle/vundle ]
+then
+    echo "Clone the vundle code"
+    git clone http://github.com/gmarik/vundle.git ~/.vim/bundle/vundle
+fi
