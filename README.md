@@ -24,6 +24,7 @@ Now mainly include configuration for [Vim], [Git]
 
 ## Quick start
 
+Linux
 1. Clone Project:
     @git clone ssh://git.hulu.com/repos/reco-dots ~/reco-dots
 
@@ -36,6 +37,14 @@ Now mainly include configuration for [Vim], [Git]
 
 4. Relogin for activate the configuration
 
+Windows
+1. Clone Project
+2. Copy git/windows/_vimrc to you $HOME
+3. Copy vim/_vimrc to you $VIM_HOME
+
+GitIgnore
+    Now include the .gitignore-java (common ignore for java project)
+    
 ## Todo
 
 Add maven settings
