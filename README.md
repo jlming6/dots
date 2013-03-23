@@ -68,7 +68,7 @@ Now mainly include configuration for [.bashrc], [Vim], [Git]
 
 3. GitIgnore:
 
-    Now include the .gitignore-java (common ignore for java project).
+    1. Now include the .gitignore-java (common ignore for java project).
     
 ## Todo
 
