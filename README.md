@@ -63,7 +63,8 @@ Windows:
 3. Copy vim/_vimrc to you $VIM_HOME.
 
 GitIgnore:
-    Now include the .gitignore-java (common ignore for java project)
+
+    Now include the .gitignore-java (common ignore for java project).
     
 ## Todo
 
