@@ -4,6 +4,7 @@ Environment and Tool Configuration
 ## About
 
 RecoDot is the common useful configurations in regular work.
+
 Now mainly include configuration for [Vim], [Git]
 
 ## What
