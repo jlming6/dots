@@ -5,30 +5,30 @@ Environment and Tool Configuration
 
 RecoDot is the common useful configurations in regular work.
 
-Now mainly include configuration for [Vim], [Git]
+Now mainly include configuration for [.bashrc], [Vim], [Git]
 
 ## What
 
-1. Bash:
+1. Bashrc:
 
     Improved promt for git:
     ```
     [mingkui.liu@qa-dev recommendation-test (dev %)]$
     ```
 
-    Command auto-completion for git
+    Command auto-completion for git.
 
 2. Vim:
 
-    Common, useful and easy to understand configuration
+    Common, useful and easy to understand configuration.
 
-    Some useful plugins, like taglist
+    Some useful plugins, like taglist, nerd tree.
 
 3. Git:
 
-    Useful configuration make git easy to use
+    Useful configuration make git easy to use.
 
-    Some alias
+    Some alias.
 
 ## Quick start
 
@@ -52,36 +52,33 @@ Linux:
     :BundleInstall # In vim
     ```
 
-4. Relogin for activate the configuration:
+4. Relogin for activating the configuration.
 
 Windows:
 
-1. Clone Project:
+1. Clone Project.
 
-2. Copy git/windows/_vimrc to you $HOME:
+2. Copy git/windows/_vimrc to you $HOME.
 
-3. Copy vim/_vimrc to you $VIM_HOME:
+3. Copy vim/_vimrc to you $VIM_HOME.
 
 GitIgnore:
-
     Now include the .gitignore-java (common ignore for java project)
     
 ## Todo
 
 Add maven settings
 
-## What you can do
-
-You guys can contribute this project in many sides:
+## How to contribute
 
 1. Put more useful configuration:
 
-    Like maven, gitconfig in mac
+    Like maven, gitconfig in mac.
 
 2. Improve exsited configuration:
 
-    Like adding more strong alias for git
+    Like adding more strong alias for git.
 
-3. Keep yourself configruation
+3. Keep yourself configruation:
 
-    Like .gitconfig-hua, .bashrc-shiwei
+    Like .gitconfig-hua, .bashrc-shiwei.
