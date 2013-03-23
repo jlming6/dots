@@ -30,39 +30,43 @@ Now mainly include configuration for [.bashrc], [Vim], [Git]
 
     Some alias.
 
+4. GitIgnore:
+
+    Common .gitignore file, now only have java.
+
 ## Quick start
 
-Linux:
+1. Linux:
 
-1. Clone Project:
+    1. Clone Project:
 
-    ```
-    git clone ssh://git.hulu.com/repos/reco-dots ~/reco-dots
-    ```
+        ```
+        git clone ssh://git.hulu.com/repos/reco-dots ~/reco-dots
+        ```
 
-2. Install configuration:
+    2. Install configuration:
 
-    ```
-    ./reco-dots/install.sh
-    ```
-3. Bundle Install:
+        ```
+        ./reco-dots/install.sh
+        ```
+    3. Bundle Install:
 
-    ```
-    vim .vimrc
-    :BundleInstall # In vim
-    ```
+        ```
+        vim .vimrc
+        :BundleInstall # In vim
+        ```
 
-4. Relogin for activating the configuration.
+    4. Relogin for activating the configuration.
 
-Windows:
+2. Windows:
 
-1. Clone Project.
+    1. Clone Project.
 
-2. Copy git/windows/_vimrc to you $HOME.
+    2. Copy git/windows/_vimrc to you $HOME.
 
-3. Copy vim/_vimrc to you $VIM_HOME.
+    3. Copy vim/_vimrc to you $VIM_HOME.
 
-GitIgnore:
+3. GitIgnore:
 
     Now include the .gitignore-java (common ignore for java project).
     
