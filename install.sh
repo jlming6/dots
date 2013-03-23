@@ -1,15 +1,17 @@
 #!/bin/bash
 
-chmod +x bash/install.sh git/linux/install.sh vim/install.sh
+dot_path=$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )
+
+chmod +x $dot_path/bash/install.sh $dot_path/git/linux/install.sh $dot_path/vim/install.sh
 
 printf '#### Bash ####\n'
-. bash/install.sh
+. $dot_path/bash/install.sh
 printf '\n'
 
 printf '#### Git ####\n'
-. git/linux/install.sh
+. $dot_path/git/linux/install.sh
 printf '\n'
 
 printf '#### Vim ####\n'
-. vim/install.sh
+. $dot_path/vim/install.sh
 printf '\n'
