@@ -9,8 +9,8 @@ set nu " Show line number
 
 set nowrap
 
-set hlsearch "Highlight search result
-set incsearch "Incremental search realtime
+set hlsearch " Highlight search result
+set incsearch " Incremental search realtime
 set backspace=indent,eol,start whichwrap+=<,>,[,]
 
 set splitright
@@ -46,6 +46,9 @@ map <C-k> <C-W>k
 map <C-h> <C-W>h
 map <C-l> <C-W>l
 
+map <C-t> :NERDTreeToggle<CR>
+
+" Settings for Tlist
 let Tlist_Show_One_File=1
 let Tlist_Exit_OnlyWindow=1
 let Tlist_Use_Right_Window=1

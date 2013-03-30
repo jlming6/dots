@@ -1,6 +1,6 @@
 [user]
-    name = Mingkui Liu
-    email = mingkui.liu@hulu.com
+    name = 
+    email = 
 [credential]
     helper = cache --timeout=3600
 [alias]
@@ -32,4 +32,4 @@
     added = green
     untracked = cyan
 [core]
-    autocrlf = true
+    autocrlf = input
