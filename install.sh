@@ -42,4 +42,7 @@ then
     echo "Clone the vundle code"
     git clone http://github.com/gmarik/vundle.git ~/.vim/bundle/vundle
 fi
+
+echo "Install ctags"
+echo "y" | sudo yum install ctags > /dev/null
 printf '\n'
