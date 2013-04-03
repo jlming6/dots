@@ -24,6 +24,14 @@ call vundle#rc()
 Bundle 'gmarik/vundle'
 Bundle 'taglist.vim'
 Bundle 'scrooloose/nerdtree'
+Bundle 'ctrlp.vim'
+Bundle 'neocomplcache'
+Bundle 'vim-scripts/desert.vim'
+Bundle '256-jungle'
+Bundle 'BlackSea'
+Bundle 'darkZ'
+
+" Bundle 'Valloric/YouCompleteMe'
 
 filetype plugin indent on
 
@@ -47,9 +55,20 @@ map <C-h> <C-W>h
 map <C-l> <C-W>l
 
 map <C-n> :NERDTreeToggle<CR>
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
+let g:NERDTreeDirArrows=0
+
+let g:ctrlp_map = '<c-p>'
+let g:ctrlp_cmd = 'CtrlP'
+map <C-b> :CtrlPBuffer<return>
+
+let g:neocomplcache_enable_at_startup = 1
 
 " Settings for Tlist
 let Tlist_Show_One_File=1
 let Tlist_Exit_OnlyWindow=1
 let Tlist_Use_Right_Window=1
 let Tlist_Auto_Open=1
+
+colorscheme BlackSea
+
