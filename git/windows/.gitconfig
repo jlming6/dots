@@ -5,6 +5,8 @@
     helper = cache --timeout=3600
 [alias]
     lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+    lost-commit = "!f(){ git show $(git show $(git fsck --lost-found | awk '/dangling commit/ {print $3}') --pretty='%H %at' -s | sort -k2 -r | awk '{print $1}') --pretty=format:'%Cred%h%Creset-%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' -s; };f"
+    lost-file = "!f(){ git show $(git fsck --lost-found | awk '/dangling blob/ {print $3}'); };f"
     co = checkout
     unstage = reset HEAD --
     last = log -1 HEAD
