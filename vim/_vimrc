@@ -17,16 +17,11 @@ set incsearch
 
 behave mswin
 colo slate
-set nobackup
 set autoindent
 set cindent
 set ic
-set cursorline
-set wildmenu
 
-set whichwrap+=<,>,h,l
-set autoread
-
+set backspace=indent,eol,start
 
 "Paste toggle - when pasting something in, don't indent.
 set pastetoggle=<F3>
