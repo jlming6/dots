@@ -1,57 +1,54 @@
-set fenc=utf-8
-set fencs=utf-8,usc-bom,euc-jp,gb18030,gbk,gb2312,cp936
-
-set nocompatible
+set nocompatible " Not compatible with vi
 syntax on
 
 set tabstop=4
 set shiftwidth=4
 set expandtab
 
-set nu
+set nu " Show line number
 
 set nowrap
 
-set hlsearch
-set incsearch
+set hlsearch " Highlight search result
+set incsearch " Incremental search realtime
+set backspace=indent,eol,start whichwrap+=<,>,[,]
 
-behave mswin
-colo slate
-set autoindent
-set cindent
-set ic
+set splitright
+set splitbelow
 
 set backspace=indent,eol,start
 
-"Paste toggle - when pasting something in, don't indent.
-set pastetoggle=<F3>
+colo slate
 
-"Remove indenting on empty lines
-map <F2> :%s/\s*$//g<cr>:noh<cr>''
+filetype plugin indent on
 
-"folding settings
-set foldmethod=indent   "fold based on indent
-set foldenable
-
-map <space> /
+if has("autocmd")
+    filetype plugin indent on
+    augroup vimrcEx
+        au!
+        autocmd FileType text setlocal textwidth=78
+        autocmd BufReadPost *
+                    \ if line("'\"") > 1 && line("'\"") <= line("$") |
+                    \ exe "normal! g`\"" |
+                    \ endif
+    augroup END
+else
+    set autoindent
+endif
 
 map <C-j> <C-W>j
 map <C-k> <C-W>k
 map <C-h> <C-W>h
 map <C-l> <C-W>l
 
-map <M-k> :move .-2<CR>
-map <M-j> :move .+1<CR>
+"folding settings
+set foldmethod=indent   "fold based on indent
+set foldenable
 
-map <C-t> <ESC>:tabnew .<CR>
-
-func! DeleteTrailingWS()
-  exe "normal mz"
-  %s/\s\+$//ge
-  exe "normal `z"
-endfunc
-
-autocmd BufWrite *.py :call DeleteTrailingWS()
+map <C-j> <C-W>j
+map <C-k> <C-W>k
+map <C-h> <C-W>h
+map <C-l> <C-W>l
 
 "Set for taglist
 filetype plugin on

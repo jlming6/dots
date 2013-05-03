@@ -16,6 +16,10 @@ set backspace=indent,eol,start whichwrap+=<,>,[,]
 set splitright
 set splitbelow
 
+" folding settings
+set foldmethod=indent   "fold based on indent
+set foldenable
+
 " Configuration for vundle
 filetype off
 set rtp+=~/.vim/bundle/vundle/
