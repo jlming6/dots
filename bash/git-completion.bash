@@ -2271,3 +2271,7 @@ if [ Cygwin = "$(uname -o 2>/dev/null)" ]; then
 complete -o bashdefault -o default -o nospace -F _git git.exe 2>/dev/null \
 	|| complete -o default -o nospace -F _git git.exe
 fi
+
+# to edit the command line as vi, add the following command
+set -o vi
+
