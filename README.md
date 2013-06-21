@@ -72,7 +72,7 @@ Now mainly include configuration for [.bashrc], [Vim], [Git]
     
 ## Todo
 
-Add maven settings
+[ ] Add maven settings
 
 ## How to contribute
 
