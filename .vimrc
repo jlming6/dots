@@ -43,7 +43,6 @@ map <C-l> <C-W>l
 
 "folding settings
 set foldmethod=indent   "fold based on indent
-set foldenable
 
 map <C-j> <C-W>j
 map <C-k> <C-W>k

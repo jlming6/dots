@@ -1,0 +1,35 @@
+[user]
+    name = Mingkui Liu
+    email = liumingkui@gmail.com
+[credential]
+    helper = cache --timeout=3600
+[alias]
+    lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+    co = checkout
+    unstage = reset HEAD --
+    last = log -1 HEAD
+    st = status
+    br = branch
+    ci = commit
+    cp = cherry-pick
+[color]
+    diff = auto
+    status = auto
+    branch = auto
+    interactive = auto
+    ui = true
+    pager = true
+[color "branch"]
+    current = yellow reverse
+    local = yellow
+    remote = green
+[color "diff"]
+    meta = yellow bold
+    frag = magenta bold
+    old = red bold
+    new = green bold       
+[color "status"]
+    added = green
+    untracked = cyan
+[core]
+    autocrlf = input
