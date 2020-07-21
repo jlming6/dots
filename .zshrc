@@ -86,9 +86,13 @@ source $ZSH/oh-my-zsh.sh
 
 alias la='ls -a'
 alias vi='vim'
+alias python=/usr/local/bin/python3
+alias pip=/usr/local/bin/pip3
 
 [[ -s ~/.autojump/etc/profile.d/autojump.sh ]] && . ~/.autojump/etc/profile.d/autojump.sh
 
-
+export PATH=/usr/bin/python:$PATH
+export PATH=/Users/mingkui.liu/Library/Python/2.7/bin:$PATH
+export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python
 export WORKON_HOME=~/Envs
 source /usr/local/bin/virtualenvwrapper.sh
